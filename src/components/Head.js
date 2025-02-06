@@ -11,7 +11,7 @@ const Head = () => {
     dispatch(toggleMenu());
   }
   return (
-    <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-white">
+    <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-gradient-to-r from-white to-black text-white">
       <div className="flex col-span-1">
         <img onClick={()=>toggleMenuHandler()} className="h-8 cursor-pointer" alt="menu" src={menuIcon} />
         <a><img className="h-10 mx-2 cursor-pointer w-44" src={logo} alt="VibeStream Logo" /></a>
