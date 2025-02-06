@@ -9,12 +9,12 @@ const Sidebar = () => {
   if(!isMenuOpen) return null;
 
   return (
-    <div className='p-5 shadow-lg w-48'>
+    <div className='p-5 shadow-lg w-48 text-white bg-black'>
         <ul>
-            <li>Home</li>
-            <li>Shorts</li>
-            <li>Videos</li>
-            <li>Live</li>
+            <li className='font-bold'>Home</li>
+            <li  className='font-bold'>Shorts</li>
+            <li  className='font-bold'>Videos</li>
+            <li  className='font-bold'>Live</li>
         </ul>
         <h1 className='font-bold pt-5'>Subscriptions</h1>
         <ul>
@@ -23,7 +23,7 @@ const Sidebar = () => {
             <li>Gaming</li>
             <li>Movies</li>
         </ul>
-        <h1 className='font-bold pt-5'>Watch Later</h1>
+        <h1 className='font-bold pt-5'>WatchLater</h1>
         <ul>
             <li>Music</li>
             <li>Sports</li>
