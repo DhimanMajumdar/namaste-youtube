@@ -2,25 +2,40 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
+import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
-  //console.log(searchParams.get("v"));
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(closeMenu());
+    
+    // Change background color to pink
+    document.body.classList.add("bg-gradient-to-r", "from-gray-800", "to-black");
+
+
+    // Reset background color when leaving the page
+    return () => {
+      document.body.style.backgroundColor = ""; // Resets to default
+    };
   }, []);
+
   return (
-    <iframe className="px-5"
-      width="1100"
-      height="500"
-      src={"https://www.youtube.com/embed/"+searchParams.get("v")}
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowFullScreen
-    ></iframe>
+    <div className="flex flex-col">   
+      <iframe className="px-5 rounded-3xl"
+        width="1100"
+        height="500"
+        src={`https://www.youtube.com/embed/${searchParams.get("v")}`}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+       <h1 className="font-extrabold text-white text-2xl  mt-3 mx-6 mb-2">Comments:</h1> 
+      <CommentsContainer/>
+    </div>
   );
 };
 
