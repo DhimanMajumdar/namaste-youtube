@@ -11,10 +11,10 @@ const Head = () => {
     dispatch(toggleMenu());
   }
   return (
-    <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-gradient-to-r from-white to-black text-white">
+    <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-gradient-to-r from-black to-gray-800 text-white">
       <div className="flex col-span-1">
         <img onClick={()=>toggleMenuHandler()} className="h-8 cursor-pointer" alt="menu" src={menuIcon} />
-        <a><img className="h-10 mx-2 cursor-pointer w-44" src={logo} alt="VibeStream Logo" /></a>
+        <img className="h-10 mx-2 cursor-pointer w-44" src={logo} alt="DEVTUBE Logo" />
       </div>
       <div className="col-span-10 px-10">
         <input className="w-1/2 border border-gray-400 p-2 rounded-l-full" type="text"/>
