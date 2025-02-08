@@ -8,7 +8,7 @@ const categories = [
 
 const ButtonList = () => {
   return (
-    <div className='flex mx-2 px-3 gap-5 bg-black shadow-lg shadow-[#36454F] '>
+    <div className='flex mx-2 px-3 gap-5 bg-gradient-to-l from-black to-gray-800 shadow-lg shadow-[#36454F] '>
       {categories.map((category, index) => (
         <Button key={index} name={category} />
       ))}

@@ -53,6 +53,7 @@ const Head = () => {
 
   return (
     <div className="grid grid-flow-col p-5 m-2 shadow-lg bg-gradient-to-r from-black to-gray-800 text-white">
+      {/* Left Side - Menu & Logo */}
       <div className="flex col-span-1">
         <img
           onClick={toggleMenuHandler}
@@ -66,6 +67,8 @@ const Head = () => {
           alt="DEVTUBE Logo"
         />
       </div>
+
+      {/* Search Bar */}
       <div className="col-span-10 px-10">
         <div>
           <input
@@ -92,8 +95,11 @@ const Head = () => {
           </div>
         )}
       </div>
-      <div className="col-span-1 text-white">
+
+      
+      <div className="col-span-1 flex items-center space-x-2">
         <img className="h-8 cursor-pointer" src={userIcon} alt="userIcon Logo" />
+        <span className="text-sm font-semibold">Dhiman Majumdar</span>
       </div>
     </div>
   );
